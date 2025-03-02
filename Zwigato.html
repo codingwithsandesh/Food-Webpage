@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zwigato - Food Delivery Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Quick inline styles for simplicity */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            width: 100%;
+            padding: 1rem;
+            background-color: #ff6363;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .banner {
+            width: 100%;
+            height: 400px;
+            background: url('https://images.unsplash.com/photo-1687945512099-400cbe94460c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bHV4dXJ5JTIwcmVzdGF1cmFudHxlbnwwfHwwfHx8MA%3D%3D') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .banner h2 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .search-form {
+            margin-top: 20px;
+            display: flex;
+        }
+
+        .search-form input {
+            padding: 10px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .search-form button {
+            padding: 10px 15px;
+            font-size: 1rem;
+            background-color: #ff6363;
+            color: white;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+
+        .restaurants {
+            width: 80%;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .restaurants h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #ff6363;
+        }
+
+        .restaurant-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .restaurant-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .restaurant-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .restaurant-card h3 {
+            font-size: 1.25rem;
+            color: #333;
+            margin: 10px;
+        }
+
+        .restaurant-card p {
+            color: #555;
+            margin: 5px 10px;
+        }
+
+        .about, .contact {
+            width: 80%;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .contact form input, .contact form textarea, .contact form button {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 1rem;
+        }
+
+        .contact form button {
+            background-color: #ff6363;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <div class="logo">
+            <h1>Zwigato</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#restaurants">Restaurants</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#login" class="btn-login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Section -->
+    <section id="home" class="banner">
+        <div>
+            <h2>Find the best restaurants near you</h2>
+            <form action="" method="get" class="search-form">
+                <input type="text" placeholder="Search for restaurants, dishes..." name="search">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Popular Restaurants Section -->
+    <section id="restaurants" class="restaurants">
+        <h2>Popular Restaurants</h2>
+        <div class="restaurant-grid">
+            <div class="restaurant-card">
+                <img src="https://t3.ftcdn.net/jpg/03/24/73/92/360_F_324739203_keeq8udvv0P2h1MLYJ0GLSlTBagoXS48.jpg" alt="Restaurant 1">
+                <h3>Restaurant 1</h3>
+                <p>Cuisine: Italian, Fast Food</p>
+                <p>Rating: ⭐⭐⭐⭐ 4.5</p>
+            </div>
+            <div class="restaurant-card">
+                <img src="https://www.pagodared.com/blog/wp-content/uploads/2018/02/WonFun-InteriorPR-copy.jpg" alt="Restaurant 2">
+                <h3>Restaurant 2</h3>
+                <p>Cuisine: Chinese, Sushi</p>
+                <p>Rating: ⭐⭐⭐ 3.9</p>
+            </div>
+            <div class="restaurant-card">
+                <img src="https://wallpapers.com/images/hd/traditional-indian-food-in-flat-lay-photograph-l808i2de2j2bacdi.jpg" alt="Restaurant 3">
+                <h3>Restaurant 3</h3>
+                <p>Cuisine: Indian, Desserts</p>
+                <p>Rating: ⭐⭐⭐⭐ 4.2</p>
+            </div>
+            <!-- Add more restaurant cards as needed -->
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>We bring you the best food from the best restaurants right to your door!</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form action="" method="post">
+            <input type="text" id="name" name="name" placeholder="Your Name">
+            <input type="email" id="email" name="email" placeholder="Your Email">
+            <textarea id="message" name="message" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Zwigato. All rights reserved.</p>
+        <p> Official Owner- Sandesh Heda.</p>
+    </footer>
+
+</body>
+</html>
